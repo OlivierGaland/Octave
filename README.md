@@ -14,12 +14,19 @@ Serial (COM) traffic should respect the following :
 
 - No unsollicited traffic should be done on serial port (debug traces or other ...)
 
-Following query/request are available :
-Computer request : GET
-Device reply : GET|sensor1:value1|sensor2:value2|.....|sensorN:valueN
-Where sensorX is the name of the sensor and valueX is the current value of this sensor.
-There is no limitation (except buffer size) to the count of sensor 
+Following query/request are available :<br>
+Computer request : GET<br>
+Device reply : GET|sensor1:value1|sensor2:value2|.....|sensorN:valueN<br>
+Where sensorX is the name of the sensor and valueX is the current value of this sensor.<br>
+There is no limitation (except buffer size) to the count of sensor<br> 
 --------------------------------------------------------------------------------------------------------------
+
+Installation :
+1) Stop Goverlay
+2) Copy bin\Debug\Octave.dll into Plugins directory of Goverlay
+3) Make sure your serial device is running and restart Goverlay
+4) Activate plugin and edit plugins Options (COM port number, speed ...)
+5) Edit your profile : the new sensors should be visible
 
 Designing your own serial device respecting this syntax should allow you to display your own sensors
 on LCDSysInfo using goverlay with Octave as a plugin
