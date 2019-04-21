@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Vérifiez les valeurs des attributs de l'assembly
 
 <Assembly: AssemblyTitle("Octave")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyDescription("goverlay plugin for serial communication")>
+<Assembly: AssemblyCompany("Olivier Galand - hyenasoft")>
 <Assembly: AssemblyProduct("Octave")>
 <Assembly: AssemblyCopyright("Copyright ©  2019")>
 <Assembly: AssemblyTrademark("")>

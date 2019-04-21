@@ -186,18 +186,8 @@
         Return elementData
     End Function
     Public Function DisplayOnLCD(sensorId As String, elementData As Hashtable, pluginOptions As Hashtable, cacheRuns As Integer) As ArrayList Implements GOverlayPlugin.Interfaces.IPlugin.DisplayOnLCD
-        Connect(pluginOptions)
-
-        'Draw on the screen
-        Dim x = elementData("x")    'grab X position of the element
-        Dim y = elementData("y")    'grab Y position of the element
-
+        Connect(pluginOptions)  'Not very nice but as I need pluginOptions to open COM port, check if connection need to be redone (in case of loss) here
         Dim commandList As New ArrayList()
-        Dim textToDraw As String = "TOTO"
-
-        'Draw Text (command as string, x as integer, y as integer, text as string, reserve_width as integer, unused as bool, unused as bool, unused as integer, basic_color as integer
-        commandList.Add(New ArrayList({"text", x, y, textToDraw, 0, False, False, 0, elementData("color")}))
-
         Return commandList
     End Function
     Public Function LCDSys2_DisplayOnLCD(sensorId As String, elementData As Hashtable, pluginOptions As Hashtable, cacheRuns As Integer) As ArrayList Implements GOverlayPlugin.Interfaces.IPlugin.LCDSys2_DisplayOnLCD
